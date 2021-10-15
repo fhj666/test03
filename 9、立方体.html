@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+            perspective: 1000px;
+        }
+
+        ul {
+            margin: 200px auto;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            padding: 0;
+            list-style: none;
+            transform-style: preserve-3d;
+            animation: run 5s linear infinite;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        li:nth-of-type(1) {
+            background-color: rgba(56, 55, 12, .3);
+            transform: translateZ(150px);
+            animation: move1 2s linear infinite;
+        }
+
+        li:nth-of-type(2) {
+            background-color: rgba(120, 28, 65, .3);
+            transform: translateZ(-150px);
+            animation: move2 2s linear infinite;
+        }
+
+        li:nth-of-type(3) {
+            background-color: rgba(555, 46, 99, .3);
+            transform: rotateX(-90deg) translateZ(150px);
+            animation: move3 2s linear infinite;
+        }
+
+        li:nth-of-type(4) {
+            background-color: rgba(200, 200, 200, .3);
+            transform: rotateX(90deg) translateZ(150px);
+            animation: move4 2s linear infinite;
+        }
+
+        li:nth-of-type(5) {
+            background-color: rgba(100, 300, 800, .3);
+            transform: rotateY(-90deg) translateZ(150px);
+            animation: move5 2s linear infinite;
+        }
+
+        li:nth-of-type(6) {
+            background-color: rgba(400, 100, 66, .3);
+            transform: rotateY(90deg) translateZ(150px);
+            animation: move6 2s linear infinite;
+        }
+
+        @keyframes run {
+            0% {
+                transform: rotate3d(1, 1, 0, 0deg);
+            }
+
+            100% {
+                transform: rotate3d(1, 1, 0, 360deg);
+            }
+        }
+
+        @keyframes move1 {
+            0% {
+                transform: translateZ(150px);
+            }
+
+            50% {
+                transform: translateZ(100px);
+            }
+
+            100% {
+                transform: translateZ(150px);
+            }
+        }
+
+        @keyframes move2 {
+            0% {
+                transform: translateZ(-150px);
+            }
+
+            50% {
+                transform: translateZ(-100px);
+            }
+
+            100% {
+                transform: translateZ(-150px);
+            }
+        }
+
+        @keyframes move3 {
+            0% {
+                transform: rotateX(-90deg) translateZ(150px);
+            }
+
+            50% {
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+
+            100% {
+                transform: rotateX(-90deg) translateZ(150px);
+            }
+        }
+
+        @keyframes move4 {
+            0% {
+                transform: rotateX(90deg) translateZ(150px);
+            }
+
+            50% {
+                transform: rotateX(90deg) translateZ(100px);
+            }
+
+            100% {
+                transform: rotateX(90deg) translateZ(150px);
+            }
+        }
+
+        @keyframes move5 {
+            0% {
+                transform: rotateY(-90deg) translateZ(150px);
+            }
+
+            50% {
+                transform: rotateY(-90deg) translateZ(100px);
+            }
+
+            100% {
+                transform: rotateY(-90deg) translateZ(150px);
+            }
+        }
+
+        @keyframes move6 {
+            0% {
+                transform: rotateY(90deg) translateZ(150px);
+            }
+
+            50% {
+                transform: rotateY(90deg) translateZ(100px);
+            }
+
+            100% {
+                transform: rotateY(90deg) translateZ(150px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img src="img/g1.jpg" alt=""></li>
+        <li><img src="img/g2.jpg" alt=""></li>
+        <li><img src="img/g3.jpg" alt=""></li>
+        <li><img src="img/g4.jpg" alt=""></li>
+        <li><img src="img/g5.jpg" alt=""></li>
+        <li><img src="img/g6.jpg" alt=""></li>
+    </ul>
+
+</body>
+
+</html>
